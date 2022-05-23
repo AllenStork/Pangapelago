@@ -1,1 +1,3 @@
 # Pangapelago
+
+A game.
