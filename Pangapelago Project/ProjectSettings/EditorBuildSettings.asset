@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 02a86e34673ff46459ca91a7a6bbc0ea
+  - enabled: 1
+    path: Assets/Scenes/Reef Village.unity
+    guid: 0d477c41a85fbc044a536552d67eaa0c
   m_configObjects: {}
