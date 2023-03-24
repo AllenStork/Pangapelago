@@ -15,11 +15,13 @@ public class CharacterMovement : MonoBehaviour
     PlayerInput input;
 
     //variables to store player input values
-    Vector2 currentMovement;
+    Vector2 currentMovementInput;
+    Vector3 currentMovement;
     bool movementPressed;
 
-   // [SerializeField] float moveSpeed = 10f;
-   // Rigidbody rb;
+    CharacterController characterController;
+    // [SerializeField] float moveSpeed = 10f;
+    // Rigidbody rb;
 
     private void Awake()
     {
@@ -28,8 +30,10 @@ public class CharacterMovement : MonoBehaviour
         // set the player input values using listeners
         input.CharacterControls.Movement.performed += ctx =>
         {
-            currentMovement = ctx.ReadValue<Vector2>();
-            movementPressed = currentMovement.x != 0 || currentMovement.y != 0;
+            currentMovementInput = ctx.ReadValue<Vector2>();
+            currentMovement.x = currentMovementInput.x;
+            currentMovement.z = currentMovementInput.y;
+            movementPressed = currentMovementInput.x != 0 || currentMovementInput.y != 0;
             
         };
         
@@ -52,6 +56,9 @@ public class CharacterMovement : MonoBehaviour
     {
         handleRotation();
         handleMovement();
+
+        characterController.Move(currentMovementInput);
+        //Vector3 playerVelocity = new Vector3(currentMovement.x * moveSpeed, rb.velocity.y, currentMovement.y * moveSpeed);
     }
 
     void handleRotation()
@@ -60,7 +67,7 @@ public class CharacterMovement : MonoBehaviour
         Vector3 currentPosition = transform.position;
 
         // the change in position our character should point to
-        Vector3 newPosition = new Vector3(currentMovement.x, 0, currentMovement.y);
+        Vector3 newPosition = new Vector3(currentMovementInput.x, 0, currentMovementInput.y);
 
         // combine the positions to give a position to look at
         Vector3 positionToLookAt = currentPosition + newPosition;
@@ -77,7 +84,7 @@ public class CharacterMovement : MonoBehaviour
 
         if (movementPressed && !isMoving)
         {
-            //Vector3 playerVelocity = new Vector3(currentMovement.x * moveSpeed, rb.velocity.y, currentMovement.y * moveSpeed);
+            
             animator.SetBool(isMovingHash, true);
         }
 
