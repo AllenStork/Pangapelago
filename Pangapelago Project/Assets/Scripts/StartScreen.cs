@@ -25,6 +25,11 @@ public class StartScreen : MonoBehaviour
         SceneManager.LoadScene(newGameScene);
     }
 
+    public void Credits()
+    {
+        SceneManager.LoadScene(3);
+    }
+
     public void QuitGame()
     {
         Application.Quit();
