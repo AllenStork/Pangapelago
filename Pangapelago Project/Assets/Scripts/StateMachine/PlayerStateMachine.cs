@@ -23,8 +23,8 @@ public class PlayerStateMachine : MonoBehaviour
 
     // constants
     public float rotationFactorPerFrame = 15.0f;
-    public float runMultiplier = 100f;
-    public float walkMultiplier = 50f;
+    public float runMultiplier = 10f;
+    public float walkMultiplier = 5f;
 
 
     // gravity variables
@@ -33,7 +33,7 @@ public class PlayerStateMachine : MonoBehaviour
 
     // jumping variables
     bool isJumpPressed = false;
-    float initialJumpVelocity;
+    public float initialJumpVelocity = 3f;
     public float maxJumpHeight = 40.0f;
     public float maxJumpTime = 0.75f;
     bool isJumping = false;
@@ -48,8 +48,8 @@ public class PlayerStateMachine : MonoBehaviour
     public PlayerBaseState CurrentState { get { return currentState; } set { currentState = value; }}
     public Animator Animator { get { return animator; }}
     public CharacterController CharacterController { get { return characterController; }}
-    public int InitialJumpVelocity { get { return (int)initialJumpVelocity; }} //might be a problem having (int)
-    public int Gravity { get { return (int)gravity; }} //might be a problem having (int)
+    public float InitialJumpVelocity { get { return (int)initialJumpVelocity; }} //might be a problem having (int)
+    public float Gravity { get { return (int)gravity; }} //might be a problem having (int)
     public int IsWalkingHash { get { return isWalkingHash; }}
     public int IsRunningHash { get { return isRunningHash; }}
     public int IsJumpingHash { get { return isJumpingHash; }}
@@ -103,9 +103,9 @@ public class PlayerStateMachine : MonoBehaviour
 
     void SetupJumpVariables()
     {
-        float timeToApex = maxJumpTime / 2;
-        gravity = (-2 * maxJumpHeight) / Mathf.Pow(timeToApex, 2);
-        initialJumpVelocity = (2 * maxJumpHeight) / timeToApex;
+        float timeToApex = maxJumpTime / 2f;
+        //gravity = -9.8f;
+        //initialJumpVelocity = 2;//(2f * maxJumpHeight) / timeToApex;
     }
 
     // Start is called before the first frame update
@@ -121,11 +121,11 @@ public class PlayerStateMachine : MonoBehaviour
         currentState.UpdateStates();
         if (isRunPressed)
         {
-            characterController.Move(currentRunMovement * Time.deltaTime);
+            characterController.Move(currentRunMovement /* * Time.deltaTime*/);
         }
         else
         {
-            characterController.Move(currentMovement * Time.deltaTime);
+            characterController.Move(currentMovement /* * Time.deltaTime*/);
         }
     }
 
