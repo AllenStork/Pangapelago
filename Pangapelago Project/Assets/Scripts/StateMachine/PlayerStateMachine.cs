@@ -13,6 +13,7 @@ public class PlayerStateMachine : MonoBehaviour
     // variables to store optimized setter/getter parameter IDs
     int isWalkingHash;
     int isRunningHash;
+    int isFallingHash;
 
     // variables to store player input values
     Vector2 currentMovementInput;
@@ -49,9 +50,10 @@ public class PlayerStateMachine : MonoBehaviour
     public Animator Animator { get { return animator; }}
     public CharacterController CharacterController { get { return characterController; }}
     public float InitialJumpVelocity { get { return (int)initialJumpVelocity; }} //might be a problem having (int)
-    public float Gravity { get { return (int)gravity; }} //might be a problem having (int)
+    //public float Gravity { get { return (int)gravity; }} //might be a problem having (int)
     public int IsWalkingHash { get { return isWalkingHash; }}
     public int IsRunningHash { get { return isRunningHash; }}
+    public int IsFallingHash { get { return isFallingHash; }}
     public int IsJumpingHash { get { return isJumpingHash; }}
     public bool IsMovementPressed { get { return isMovementPressed; }}
     public bool IsRunPressed { get { return isRunPressed; }}
@@ -59,10 +61,14 @@ public class PlayerStateMachine : MonoBehaviour
     public bool IsJumping { set { isJumping = value; }}
     public bool IsJumpPressed { get { return isJumpPressed; }}
     public float GroundedGravity { get { return groundedGravity; }}
+    public float Gravity { get { return gravity; }} //refer to commentted out gravity above
     public float CurrentMovementY { get { return currentMovement.y; } set { currentMovement.y = value; }}
-    public float CurrentRunMovementY { get { return currentRunMovement.y; } set { currentRunMovement.y = value; }}
-    public float CurrentMovementX { get { return currentMovement.x; } set { currentMovement.x = value; }}
-    public float CurrentMovementZ { get { return currentMovement.z; } set { currentMovement.z = value; }}
+   // public float AppliedMovementY { get { return currentMovement.y; } set { currentMovement.y = value; }}
+   // public float AppliedMovementX { get { return currentMovement.y; } set { currentMovement.y = value; }}
+  //  public float AppliedMovementZ { get { return currentMovement.y; } set { currentMovement.y = value; }}
+    public float CurrentRunMovementY { get { return currentRunMovement.y; } set { currentRunMovement.y = value; }} //omitted in tut ?
+    public float CurrentMovementX { get { return currentMovement.x; } set { currentMovement.x = value; }} //omitted in tut ?
+    public float CurrentMovementZ { get { return currentMovement.z; } set { currentMovement.z = value; }} //omitted in tut ?
     public float RunMultiplier { get { return runMultiplier; }}
     public Vector2 CurrentMovementInput { get { return currentMovementInput; }}
 
@@ -81,6 +87,7 @@ public class PlayerStateMachine : MonoBehaviour
         // set the parameter hash references
         isWalkingHash = Animator.StringToHash("isWalking");
         isRunningHash = Animator.StringToHash("isRunning");
+        isFallingHash = Animator.StringToHash("isFalling");
         isJumpingHash = Animator.StringToHash("isJumping");
 
         // keyboard input dectection on press move

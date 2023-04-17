@@ -27,5 +27,8 @@ public class PlayerStateFactory
     {
         return new PlayerGroundedState(context, this);
     }
-
+    public PlayerBaseState Fall()
+    {
+        return new PlayerFallState(context, this);
+    }
 }
