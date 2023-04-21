@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerJumpState : PlayerBaseState
+public class PlayerJumpState : PlayerBaseState, IRootState
 {
     public PlayerJumpState(PlayerStateMachine currentContext, PlayerStateFactory playerStateFactory)
     :base(currentContext, playerStateFactory)
@@ -18,12 +18,14 @@ public class PlayerJumpState : PlayerBaseState
 
     public override void UpdateState()
     {
+        HandleGravity();
+        Debug.Log("UPDATE FROM JUMP STATE");
         CheckSwitchStates();
-        handleGravity();
     }
 
     public override void ExitState()
     {
+        Debug.Log("EXITING JUMP STATE");
         Ctx.Animator.SetBool(Ctx.IsJumpingHash, false);
         if (Ctx.IsJumpPressed)
         {
@@ -65,7 +67,7 @@ public class PlayerJumpState : PlayerBaseState
         Ctx.CurrentRunMovementY = Ctx.InitialJumpVelocity * .5f;
     }
 
-    void handleGravity()
+    public void HandleGravity()
     {
         bool isFalling = Ctx.CurrentMovementY <= 0.0f || !Ctx.IsJumpPressed;
         float fallMultiplier = 2.0f;

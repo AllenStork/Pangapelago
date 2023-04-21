@@ -118,7 +118,7 @@ public class PlayerStateMachine : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //characterController.Move(appliedMovement * Time.deltaTime);
     }
 
     // Update is called once per frame

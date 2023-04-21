@@ -530,17 +530,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56f6453605ebc5147b0ca4c896be2c53, type: 3}
---- !u!114 &466323264 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7999933103108872347, guid: 56f6453605ebc5147b0ca4c896be2c53, type: 3}
-  m_PrefabInstance: {fileID: 466323263}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83e0c85ed99e4a748aaa2e5275ff2807, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &561352032
 GameObject:
   m_ObjectHideFlags: 0
@@ -932,6 +921,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4414350488783280508, guid: 9f7a46941238b5c4dae2697001075927, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4414350488783280509, guid: 9f7a46941238b5c4dae2697001075927, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1031,14 +1024,14 @@ PrefabInstance:
     - target: {fileID: 4414350489378684081, guid: 9f7a46941238b5c4dae2697001075927, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 466323264}
+      objectReference: {fileID: 1336013661}
     - target: {fileID: 4414350489378684081, guid: 9f7a46941238b5c4dae2697001075927, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ReturnToMain
+      value: Execute
       objectReference: {fileID: 0}
     - target: {fileID: 4414350489378684081, guid: 9f7a46941238b5c4dae2697001075927, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MenuController, Assembly-CSharp
+      value: GameCreator.Core.Actions, Assembly-CSharp-firstpass
       objectReference: {fileID: 0}
     - target: {fileID: 4414350489378684082, guid: 9f7a46941238b5c4dae2697001075927, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1070,6 +1063,78 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f7a46941238b5c4dae2697001075927, type: 3}
+--- !u!1 &1336013659 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4414350489378684083, guid: 9f7a46941238b5c4dae2697001075927, type: 3}
+  m_PrefabInstance: {fileID: 1336013658}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1336013660
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336013659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actions:
+  - {fileID: 1336013662}
+  executingIndex: -1
+  isExecuting: 0
+--- !u!114 &1336013661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336013659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentID: 0
+  instanceID: 0
+  actionsList: {fileID: 1336013660}
+  runInBackground: 1
+  destroyAfterFinishing: 0
+  onFinish:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1336013662
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336013659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22bf180dbba634dad9e944499605fd60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isExpanded: 1
+  sceneName:
+    optionIndex: 0
+    value: Main Menu
+    global:
+      allowTypesMask: 2
+      name: 
+    local:
+      allowTypesMask: 2
+      name: 
+      targetType: 2
+      targetObject: {fileID: 0}
+    list:
+      targetType: 3
+      targetObject: {fileID: 0}
+      select: 1
+      index: 0
+  mode: 0
+  async: 0
 --- !u!1 &1381105696
 GameObject:
   m_ObjectHideFlags: 0

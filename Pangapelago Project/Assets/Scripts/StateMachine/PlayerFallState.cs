@@ -5,7 +5,7 @@ using UnityEngine;
 //BUG: Currently causes Unda to plummet to the ground instead of floating down. Also she's perpetually falling???
 //Tutorial bookmark: iHeartGameDev vid 7/8 10:12/19:08
 
-public class PlayerFallState : PlayerBaseState
+public class PlayerFallState : PlayerBaseState, IRootState
 {
     public PlayerFallState(PlayerStateMachine currentContext, PlayerStateFactory playerStateFactory)
         : base (currentContext, playerStateFactory)
@@ -19,9 +19,9 @@ public class PlayerFallState : PlayerBaseState
     }
 
     public override void UpdateState()
-    {
-        CheckSwitchStates();
+    { 
         HandleGravity();
+        CheckSwitchStates();
     }
 
     public override void ExitState()
@@ -29,7 +29,7 @@ public class PlayerFallState : PlayerBaseState
         Ctx.Animator.SetBool(Ctx.IsFallingHash, false);
     }
 
-    void HandleGravity()
+    public void HandleGravity()
     {
         float previousYVelocity = Ctx.CurrentMovementY;
         Ctx.CurrentMovementY = Ctx.CurrentMovementY + Ctx.Gravity * Time.deltaTime;
