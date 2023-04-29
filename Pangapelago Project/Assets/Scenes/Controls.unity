@@ -196,7 +196,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0b050bd1c34d3d64f8718b6afc268f46, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 619a54d2efcf44a44b00408f9f1f1a2c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -915,6 +915,7 @@ GameObject:
   - component: {fileID: 2048752604}
   - component: {fileID: 2048752606}
   - component: {fileID: 2048752605}
+  - component: {fileID: 2048752608}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1095,6 +1096,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actions:
+  - {fileID: 2048752608}
   - {fileID: 2048752605}
   executingIndex: -1
   isExecuting: 0
@@ -1118,3 +1120,32 @@ MonoBehaviour:
   onFinish:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2048752608
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048752598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b943f98b5062432a844421946c8c401, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isExpanded: 1
+  timeScale:
+    optionIndex: 0
+    value: 1
+    global:
+      allowTypesMask: 4
+      name: 
+    local:
+      allowTypesMask: 4
+      name: 
+      targetType: 2
+      targetObject: {fileID: 0}
+    list:
+      targetType: 3
+      targetObject: {fileID: 0}
+      select: 1
+      index: 0
