@@ -1,0 +1,279 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1717265380810511245
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8019713596195786302}
+  m_Layer: 0
+  m_Name: Coral cluster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8019713596195786302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717265380810511245}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.538143, y: 10.037067, z: -320.38824}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 9157333627315804210}
+  - {fileID: 9157333627867614383}
+  - {fileID: 9157333628372917146}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &8691906700469697649
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8019713596195786302}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -60.74
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.998169
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.41
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_Name
+      value: Bouncy Coral (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+--- !u!1 &8385336120796791072 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+  m_PrefabInstance: {fileID: 8691906700469697649}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &8691906700463691362
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8385336120796791072}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &9157333628372917146 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+  m_PrefabInstance: {fileID: 8691906700469697649}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8691906700975057732
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8019713596195786302}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -60.843452
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.998169
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.029114
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_Name
+      value: Bouncy Coral (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+--- !u!1 &8385336120228550165 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+  m_PrefabInstance: {fileID: 8691906700975057732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &8691906701628605789
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8385336120228550165}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &9157333627867614383 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+  m_PrefabInstance: {fileID: 8691906700975057732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8691906701560430553
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8019713596195786302}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -59.212776
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.998184
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.070801
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+      propertyPath: m_Name
+      value: Bouncy Coral (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+--- !u!1 &8385336119739646600 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+  m_PrefabInstance: {fileID: 8691906701560430553}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &8691906701501571292
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8385336119739646600}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &9157333627315804210 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cd4c4ab95929e0340a9b42bbc146734e, type: 3}
+  m_PrefabInstance: {fileID: 8691906701560430553}
+  m_PrefabAsset: {fileID: 0}
