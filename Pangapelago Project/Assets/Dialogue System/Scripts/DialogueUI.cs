@@ -27,7 +27,7 @@ namespace HeneGames.DialogueSystem
 
         #endregion
 
-        private DialogueManager currentDialogueManager;
+        public DialogueManager currentDialogueManager;
 
         [Header("References")]
         [SerializeField] private Image portrait;
@@ -38,6 +38,9 @@ namespace HeneGames.DialogueSystem
 
         [Header("Next sentence input")]
         public KeyCode actionInput = KeyCode.Space;
+
+        [Header("Next sentence input alt")]
+        public KeyCode actionInput2 = KeyCode.JoystickButton3;
 
         private void Start()
         {
@@ -53,7 +56,7 @@ namespace HeneGames.DialogueSystem
                 return;
 
             //Next dialogue input
-            if (Input.GetKeyDown(actionInput))
+            if (Input.GetKeyDown(actionInput) || Input.GetKeyDown(actionInput2))
             {
                 //Tell the current dialogue manager to display the next sentence. This function also gives information if we are at the last sentence
                 currentDialogueManager.NextSentence(out bool lastSentence);

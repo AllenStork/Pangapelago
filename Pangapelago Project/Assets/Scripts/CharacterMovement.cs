@@ -94,7 +94,7 @@ public class CharacterMovement : MonoBehaviour
     void onJump (InputAction.CallbackContext context)
     {
         isJumpPressed = context.ReadValueAsButton();
-//        Debug.Log(isJumpPressed);
+        Debug.Log(isJumpPressed);
     }
 
     void onRun (InputAction.CallbackContext context)

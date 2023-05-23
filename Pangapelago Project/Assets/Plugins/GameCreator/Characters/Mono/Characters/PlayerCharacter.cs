@@ -41,6 +41,7 @@
         public bool invertAxis;
 
         public KeyCode jumpKey = KeyCode.Space;
+        public KeyCode jumpKey2 = KeyCode.JoystickButton0;
 
         protected bool uiConstrained;
         protected Camera cacheCamera;
@@ -111,7 +112,7 @@
 
             if (this.IsControllable())
             {
-                if (Input.GetKeyDown(this.jumpKey)) this.Jump();
+                if (Input.GetKeyDown(this.jumpKey) || Input.GetKeyDown(this.jumpKey2)) this.Jump();
             }
             else
             {

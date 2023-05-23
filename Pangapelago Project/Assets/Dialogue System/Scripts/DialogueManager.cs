@@ -39,7 +39,7 @@ namespace HeneGames.DialogueSystem
             }
 
             //Start dialogue by input
-            if (Input.GetKeyDown(DialogueUI.instance.actionInput) && dialogueTrigger != null && !dialogueIsOn)
+            if (Input.GetKeyDown(DialogueUI.instance.actionInput) || Input.GetKeyDown(DialogueUI.instance.actionInput2) && dialogueTrigger != null && !dialogueIsOn)
             {
                 //Trigger event inside DialogueTrigger component
                 if (dialogueTrigger != null)
